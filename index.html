@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Jeonnam Pet AR</title>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.5/aframe/build/aframe-ar-nft.js"></script>
+</head>
+<body style="margin:0; overflow:hidden;">
+
+  <!-- AR 장면 -->
+  <a-scene
+    vr-mode-ui="enabled: false"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+  >
+
+    <!-- 무안 양파 -->
+    <a-marker type="pattern" url="./markers/onion.patt">
+      <a-plane src="./models/onion.png"
+               position="0 0.6 0"
+               rotation="-90 0 0"
+               width="1.5" height="1.5"
+               transparent="true"
+               material="alphaTest:0.5"></a-plane>
+    </a-marker>
+
+    <!-- 여수 갈치 -->
+    <a-marker type="pattern" url="./markers/galchi.patt">
+      <a-plane src="./models/galchi.png"
+               position="0 0.6 0"
+               rotation="-90 0 0"
+               width="2" height="1"
+               transparent="true"
+               material="alphaTest:0.5"></a-plane>
+    </a-marker>
+
+    <!-- 담양 대나무 -->
+    <a-marker type="pattern" url="./markers/bamboo.patt">
+      <a-plane src="./models/bamboo.png"
+               position="0 0.6 0"
+               rotation="-90 0 0"
+               width="1" height="2"
+               transparent="true"
+               material="alphaTest:0.5"></a-plane>
+    </a-marker>
+
+    <!-- 전남 로고 -->
+    <a-marker type="pattern" url="./markers/jeonnam.patt">
+      <a-plane src="./models/jeonnam.png"
+               position="0 0.6 0"
+               rotation="-90 0 0"
+               width="2" height="2"
+               transparent="true"
+               material="alphaTest:0.5"></a-plane>
+    </a-marker>
+
+    <!-- 카메라 -->
+    <a-entity camera></a-entity>
+
+  </a-scene>
+
+</body>
+</html>
